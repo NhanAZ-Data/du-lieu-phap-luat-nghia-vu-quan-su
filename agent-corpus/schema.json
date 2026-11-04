@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NVQS agent corpus schema",
+  "description": "Schema v2 cho corpus văn bản nghĩa vụ quân sự Việt Nam.",
+  "schema_version": 2,
+  "normalization_profile": "vi-legal-v2",
+  "files": {
+    "documents": "documents.jsonl",
+    "text_units": "pages.jsonl",
+    "anchors": "anchors.jsonl",
+    "index": "index.yaml",
+    "text_markdown": "text/*.md"
+  },
+  "record_types": {
+    "document": {
+      "required": [
+        "schema_version",
+        "record_type",
+        "document_index",
+        "id",
+        "identifier",
+        "title",
+        "source_pdf",
+        "pdf_page_count",
+        "pdf_sha256",
+        "pdf_manifest_match",
+        "text_file",
+        "text_source",
+        "text_unit_count",
+        "text_char_count",
+        "quality_status"
+      ],
+      "text_source_values": [
+        "online_html",
+        "online_doc",
+        "pdf_extraction"
+      ],
+      "quality_status_values": [
+        "ok",
+        "page_extraction_warning",
+        "partial_or_image_only",
+        "empty_or_image_only"
+      ]
+    },
+    "text_unit": {
+      "required": [
+        "schema_version",
+        "record_type",
+        "document_index",
+        "document_id",
+        "unit_id",
+        "unit_index",
+        "page_number",
+        "source_kind",
+        "text",
+        "char_count",
+        "is_empty"
+      ]
+    },
+    "anchor": {
+      "required": [
+        "schema_version",
+        "record_type",
+        "anchor_id",
+        "document_index",
+        "document_id",
+        "unit_id",
+        "unit_index",
+        "page_number",
+        "source_kind",
+        "line_number",
+        "anchor_type",
+        "heading"
+      ],
+      "anchor_type_values": [
+        "chapter",
+        "section",
+        "article",
+        "appendix",
+        "form"
+      ]
+    }
+  }
+}

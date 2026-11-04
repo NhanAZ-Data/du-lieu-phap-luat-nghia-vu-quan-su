@@ -1,0 +1,88 @@
+schema_version: 1
+description: >-
+  Các URL toàn văn HTML/text được kiểm tra trước khi dùng PDF extraction. Đây là lớp
+  nguồn đọc; PDF trong van-ban-nguon vẫn là nguồn tệp gốc để đối chiếu hash, trang và dấu.
+sources:
+  SRC-LAW-2015:
+    url: https://vanban.org/van-ban/luat-nghia-vu-quan-su-2015-78-2015-qh13
+    source_tier: secondary_fulltext
+    selector: article#vbd2-doc
+    min_chars: 10000
+  SRC-LAW-2025:
+    url: https://vanban.org/van-ban/luat-sua-doi-11-luat-ve-quan-su-quoc-phong-2025-98-2025-qh15
+    source_tier: secondary_fulltext
+    selector: article#vbd2-doc
+    min_chars: 5000
+  SRC-LAW-2026:
+    url: https://vanban.org/van-ban/luat-sua-doi-09-luat-ve-quan-su-quoc-phong-2026-14-2026-qh16
+    source_tier: secondary_fulltext
+    selector: article#vbd2-doc
+    min_chars: 10000
+  SRC-LAW-CONSOLIDATED:
+    url: "https://g7.cdnchinhphu.vn/api/download/stream?Url=tm-8mq6BhNw0NbrKRhTDAaHMpvrqWaeHuYm7lW3HNfzTzww8Myg35dDL_fJB4izwRzTe4JwK4fBfO2B1qhBWZYB3_HRGBkJnOu_F2rjQJzQZMjhy3Kd5xo3sJ81AOjIaz4eksVl33TVY_hbjIRqdFg~~&file_name=2026_524-VBHN_133%2f2026%2fVBHN-LQ-VPQH.docx"
+    source_page: https://congbao.chinhphu.vn/van-ban/van-ban-hop-nhat-so-133-2026-vbhn-lq-vpqh-470536.htm
+    source_tier: official_congbao_doc
+    format: docx
+    min_chars: 30000
+  SRC-SELECT-2025:
+    url: https://www.phapluatquansu.vn/2025/08/van-ban-hop-nhat-so-36vbhn-bqp-quy-inh.html
+    source_tier: secondary_fulltext
+    selector: article.post-body
+    min_chars: 15000
+  SRC-HEALTH-2025:
+    url: https://lawplayer.com/vn/act/vn-vbpl-184582
+    source_tier: secondary_fulltext
+    selector: .ccws-articles
+    min_chars: 30000
+  SRC-HEALTH-AMEND:
+    url: https://lawplayer.com/vn/act/vn-vbpl-182734
+    source_tier: secondary_fulltext
+    selector: .ccws-articles
+    min_chars: 20000
+  SRC-PROCEDURE:
+    url: https://lawplayer.com/vn/act/vn-vbpl-182742
+    source_tier: secondary_fulltext
+    selector: .ccws-articles
+    min_chars: 15000
+  SRC-REGISTRATION-ADMIN:
+    url: https://xaydungchinhsach.chinhphu.vn/huong-dan-chi-tiet-cac-buoc-dang-ky-nghia-vu-quan-su-lan-dau-119251210164223646.htm
+    source_tier: official_summary_only
+    selector: .detail-content
+    min_chars: 10000
+  SRC-LOCAL-GOV:
+    url: https://vanban.org/van-ban/nghi-dinh-220-2025-nd-cp-sua-doi-linh-vuc-quoc-phong-quan-su-to-chuc
+    source_tier: secondary_fulltext
+    selector: article#vbd2-doc
+    min_chars: 10000
+  SRC-PENALTY:
+    url: https://vanban.org/van-ban/nghi-dinh-218-2025-nd-cp-xu-phat-vi-pham-hanh-chinh-linh-vuc-quoc-phong-co-yeu
+    source_tier: secondary_fulltext
+    selector: article#vbd2-doc
+    min_chars: 10000
+  SRC-CAND:
+    url: "https://g7.cdnchinhphu.vn/api/download/stream?Url=tm-8mq6BhNw0NbrKRhTDAQWsKg3tuqaY0aWypnY78U6M2BY68Ekp0Gvvr483flbRBsyfxL2TnyJ_UF7O2giZYZB7QTpXGlPjdSR-ovuiuSvFBjsF1Ka__JHovWgPp9bCaNdv948GOr_2sGgzr5Bhtw~~&file_name=2025_1623+%2b+1624_101-2025-TT-BCA.doc"
+    source_page: https://congbao.chinhphu.vn/van-ban/thong-tu-so-101-2025-tt-bca-46609.htm
+    source_tier: official_congbao_doc
+    format: doc
+    min_chars: 30000
+  SRC-CRIMINAL:
+    url: https://vanban.org/van-ban/bo-luat-hinh-su-2015-100-2015-qh13
+    source_tier: secondary_fulltext
+    selector: article#vbd2-doc
+    min_chars: 50000
+  SRC-SELECT-AMEND-2025:
+    url: https://lsu.vn/van-ban/thong-tu-68-2025-tt-bqp-bo-quoc-phong
+    source_page: https://congbao.chinhphu.vn/van-ban/thong-tu-so-68-2025-tt-bqp-45432.htm
+    source_tier: secondary_fulltext
+    selector: main
+    min_chars: 10000
+  SRC-HEALTH-BASE-2023:
+    url: https://xaydungchinhsach.chinhphu.vn/toan-van-thong-tu-quy-dinh-kham-suc-khoe-cho-cac-doi-tuong-thuoc-quan-ly-cua-bo-quoc-phong-119231211181442997.htm
+    source_tier: official_html
+    selector: .detail-content
+    min_chars: 30000
+  SRC-HEALTH-GUIDANCE-2027:
+    url: https://www.phapluatquansu.vn/2026/11/huong-dan-8428qy-tr-ngay-04112026-cua.html
+    source_tier: official_attachment_mirror_summary_only
+    selector: article.post-body
+    min_chars: 15000
